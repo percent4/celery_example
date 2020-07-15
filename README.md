@@ -1,12 +1,23 @@
 # celery_example
-two examples for celery with python, one for math operation, the other for web scraping.
 
-### celery架构图：
+利用celery执行定时任务。
 
-![](https://github.com/percent4/celery_example/blob/master/celery%E6%9E%B6%E6%9E%84.png)
-
-### python依赖模块
+### 依赖模块
 
 - celery
 - redis
 - msgpack
+
+### 输入命令
+
+celery 启动命令:
+
+```
+celery -A proj.app_test worker -l info
+```
+
+启动定时任务命令:
+
+```
+celery beat -A proj.app_test
+```
